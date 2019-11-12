@@ -1,0 +1,5 @@
+# Proxy
+
+```
+kubectl proxy
+```
