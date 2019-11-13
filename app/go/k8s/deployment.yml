@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-app
+spec:
+  selector:
+    matchLabels:
+      name: go-app
+  template:
+    metadata:
+      labels:
+        name: go-app
+    spec:
+      containers:
+      - name: go-app
+        image: iamgoangle/go-app:v1.0.0
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 3000
+            protocol: TCP
