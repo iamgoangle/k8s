@@ -10,12 +10,13 @@ spec:
   template:
     metadata:
       labels:
+        project: golf
         name: go-app
     spec:
       containers:
-      - name: go-app
-        image: iamgoangle/go-app:v1.0.0
-        imagePullPolicy: Always
-        ports:
-          - containerPort: 3000
-            protocol: TCP
+        - name: go-app
+          image: goangle/go-app:v1.0.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              protocol: TCP
